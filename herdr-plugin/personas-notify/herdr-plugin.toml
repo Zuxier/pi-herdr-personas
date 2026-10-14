@@ -1,0 +1,10 @@
+id = "local.personas-notify"
+name = "Personas settled notify"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Ping the coordinator agent and show a toast when a registered persona child settles (idle/done/blocked)."
+platforms = ["linux"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["python3", "notify.py"]
